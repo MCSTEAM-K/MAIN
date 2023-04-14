@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DASHBOARD</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="topbar">
+            <div class="logo">
+                <h2>MAUTIGU</h2>
+            </div>
+            <div class="search">
+                <input type="text" id="search" placeholder="Search Here">
+                <label for="search"><i class="fas fa-search"></i></label>
+            </div>
+            <i class="fas fa-bell"></i>
+            <div class="user">
+                <img src="img/mcsc.png" alt="">
+            </div>
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li onclick="showDashboardSection()" class="hover">
+                    <a onclick="" href="#">
+                        <i class="fas fa-th-large"></i>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showCampaignSection()" href="#">
+                        <i class="fa-solid fa-building-columns"></i>
+                        Campaigns
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showEmployeesSection()" href="#">
+                        <i class="fas fa-user"></i>
+                        Employees
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showAnalyticsSection()" href="#">
+                        <i class="fas fa-chart-bar"></i>
+                        Analytics
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showEarningsSection()" href="#">
+                        <i class="fas fa-hand-holding-usd"></i>
+                        Earnings
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showAccountingSection()" href="#">
+                        <i class="fa-solid fa-calculator"></i>
+                        Accounting
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showDirectorySection()" href="#">
+                        <i class="fa-solid fa-address-book"></i>
+                        Directory
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showSettingsSection()" href="#">
+                        <i class="fas fa-cog"></i>
+                        Settings
+                    </a>
+                </li>
+                <li>
+                    <a onclick="showHelpSection()" href="#">
+                        <i class="fas fa-question"></i>
+                        Help
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <i class="fa-solid fa-power-off"></i>
+                        Logout
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <!-- dashboard -->
+            <section id="dashboardSection">
+                <div class="cards">
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">16,217</div>
+                            <div class="card-name">Accounts</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-users"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">1,029</div>
+                            <div class="card-name">For Field</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">815</div>
+                            <div class="card-name">Released</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-envelope-circle-check"></i>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-content">
+                            <div class="number">214</div>
+                            <div class="card-name">Remaining</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-envelopes-bulk"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="charts">
+                    <div class="chart">
+                        <h2>Accounts</h2>
+                        <div id="barChart"></div>
+                    </div>
+                    <div class="chart">
+                        <h2>Progress</h2>
+                        <div id="pieChart"></div>
+                    </div>
+                </div>
+            </section>
+            <!-- campaign -->
+            <section id="campaignSection">
+                <div class="campaignCards">
+                    <div class="campaignCard">
+                        <img src="img/cbs.jpg" alt="">
+                        <h2>CHINABANK SAVINGS</h2>
+                    </div>
+                    <div class="campaignCard">
+                        <img src="img/rbank.png" alt="">
+                        <h2>ROBINSONS BANK</h2>
+                    </div>
+                    <div class="campaignCard">
+                        <img src="img/bmi.jpg" alt="">
+                        <h2>BANK OF MAKATI</h2>
+                    </div>
+                    <div class="campaignCard">
+                        <img src="img/unistar.jpg" alt="">
+                        <h2>UNISTAR</h2>
+                        <h4>CREDIT FINANCE</h4>
+                    </div>
+                    <div class="campaignCard">
+                        <img src="img/unionbank.jpg" alt="">
+                        <h2>UNIONBANK</h2>
+                    </div>
+                </div>
+                <div id="campaignContent">
+                    <div class="header">
+                        <img src="img/cbs.jpg">
+                        <h1>CHINA BANK SAVINGS</h1>
+                    </div>
+                    <div class="content">
+                        <table>
+                            <th>DL NUMBER</th>
+                            <th>CAMPAIGN</th>
+                            <th>DATE FIELD</th>
+                            <th>TIME IN</th>
+                            <th>TIME OUT</th>
+                            <th>AREA</th>
+                            <th>COLLECTOR</th>
+                            <th>FIELD COLLECTOR</th>
+                            <th>REMARKS</th>
+                            <th>STATUS</th>
+                            <tr>
+                        </table>
+                    </div>
+                </div>
+            </section>
+            <!-- employees -->
+            <section id="employeesSection">
+                <div class="employeesCards">
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">2</div>
+                            <div class="card-name">Manager</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-secret"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">3</div>
+                            <div class="card-name">Supervisor</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">2</div>
+                            <div class="card-name">I.T.</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">2</div>
+                            <div class="card-name">Accounting</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">7</div>
+                            <div class="card-name">Admin</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-tag"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">7</div>
+                            <div class="card-name">Tele-Collector</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-users-line"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">3</div>
+                            <div class="card-name">Field Messenger</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- analytic -->
+            <section id="analyticSection">
+            </section>
+            <!-- earnings -->
+            <section id="earningsSection">
+                <!-- <div class="employeesCards">
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">2</div>
+                            <div class="card-name">Manager</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-secret"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">3</div>
+                            <div class="card-name">Supervisor</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-tie"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">2</div>
+                            <div class="card-name">I.T.</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-gear"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">2</div>
+                            <div class="card-name">Accounting</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-pen"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">7</div>
+                            <div class="card-name">Admin</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-user-tag"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">7</div>
+                            <div class="card-name">Tele-Collector</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-users-line"></i>
+                        </div>
+                    </div>
+                    <div class="employeesCard">
+                        <div class="card-content">
+                            <div class="number">3</div>
+                            <div class="card-name">Field Messenger</div>
+                        </div>
+                        <div class="icon-box">
+                            <i class="fa-solid fa-motorcycle"></i>
+                        </div>
+                    </div>
+                </div> -->
+            </section>
+            <!-- accounting -->
+            <section id="accountingSection">
+                <div class="accountingContainer">
+                    <button id="incomeTabBtn" onclick="showIncomeTab()" class="incomeBtn">
+                        INCOME
+                    </button>
+                    <button id="expenseTabBtn" onclick="showExpenseTab()" class="expenseBtn">
+                        EXPENSE
+                    </button>
+                    <form id="income" class="expense" action="https://script.google.com/macros/s/AKfycbw5-Skgudb76_ER9DwfJRG2zLjhcm7e2_ozaQbEgFULg-UJ51_CrUEnzLSR6K9S3LV0TA/exec" method="post">
+                        <div class="row2">
+                            <div class="row2-2">
+                                <label for="">DATE:</label>
+                                <input type="date" name="date">
+                            </div>
+                            <br>
+                            <div class="row2-2">
+                                <label for="">TEAM:</label>
+                                <select name="team" id="">
+                                    <option value=""></option>
+                                    <option value="TEAM MARIE">TEAM MARIE</option>
+                                    <option value="TEAM KAREN">TEAM KAREN</option>
+                                </select>
+                            </div>
+                            <div class="row2-2">
+                                <label for="">BANK:</label>
+                                <select name="bank" id="">
+                                    <option value=""></option>
+                                    <option id="TEAM KAREN" value='CHINABANK SAVINGS'>CHINABANK SAVINGS</option>
+                                    <option id="TEAM KAREN" value='ROBINSONS BANK'>ROBINSONS BANK</option>
+                                    <option id="TEAM KAREN" value='BANK OF MAKATI'>BANK OF MAKATI</option>
+                                    <option id="TEAM KAREN" value='UNISTAR'>UNISTAR</option>
+                                    <option id="TEAM KAREN" value='UNIONBANK'>UNIONBANK</option>
+                                    <option id="TEAM KAREN" value='MALAYAN SAVINGS BANK'>MALAYAN SAVINGS BANK</option>
+                                </select>
+                            </div>
+                            <div class="row2-2">
+                                <label for="">CAMPAIGN:</label>
+                                <select name="campaign" id="">
+                                    <option value=""></option>
+                                    <option id="CHINABANK SAVINGS" value='PERSONAL LOAN'>PERSONAL LOAN</option>
+                                    <option id="CHINABANK SAVINGS" value='HANDY SALARY'>HANDY SALARY</option>
+                                    <option id="CHINABANK SAVINGS" value='AUTO LOAN'>AUTO LOAN</option>
+                                    <option id="CHINABANK SAVINGS" value='HOUSING LOAN'>HOUSING LOAN</option>
+                                    <option id="CHINABANK SAVINGS" value="TEACHER'S LOAN">TEACHER'S LOAN</option>
+                                    <option id="ROBINSONS BANK" value='MOTORCYCLE LOAN'>MOTORCYCLE LOAN</option>
+                                    <option id="ROBINSONS BANK" value='PERSONAL LOAN'>PERSONAL LOAN</option>
+                                    <option id="ROBINSONS BANK" value='CARDS'>CARDS</option>
+                                    <option id="BANK OF MAKATI" value='PERSONAL LOAN'>PERSONAL LOAN</option>
+                                    <option id="UNISTAR" value='MOTORCYCLE LOAN'>MOTORCYCLE LOAN</option>
+                                    <option id="UNIONBANK" value='HOUSING LOAN'>HOUSING LOAN</option>
+                                    <option id="MALAYAN SAVINGS BANK" value='MOTORCYCLE LOAN'>MOTORCYCLE LOAN</option>
+                                </select>
+                            </div>
+                            <div class="row2-2">
+                                <label for="">COLLECTOR</label>
+                                <input name="collector" type="text">
+                            </div>
+                        </div>
+                        <div class="row3">
+                            <div class="center">AMOUNT</div>
+                            <div class="row3-3">
+                                <div class="">
+                                    <label for="">AMOUNT COLLECTED</label>
+                                    <input name="amountCollected" id="income_amount_collected" type="text">    
+                                </div>
+                                <div class="">
+                                    <label for="">CF RATE</label>
+                                    <input name="cfRate" id="income_cf_rate" type="text">    
+                                </div>
+                                <div class="">
+                                    <label for="">COLLECTION FEE</label>
+                                    <input name="collectionFee" id="income_collectin_fee" type="text" readonly>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expenseButtons">
+                            <button type="submit" id="expenseSubmitBtn">Submit</button>
+                            <button type="reset" id="expenseResetBtn">Clear</button>
+                        </div>
+                    </form>
+                    <form id="expense" class="expense" action="https://script.google.com/macros/s/AKfycbx3QhnN9nAOqrV4P0SXD9UAbddEumRuc-qgGBtcAe0XBp5MBIpMnGdVE3U-z3NiRW1uWA/exec" method="post">
+                        <div class="row2">
+                            <div class="row2-2">
+                                <label for="">DATE:</label>
+                                <input type="date" name="date">
+                            </div>
+                            <br>
+                            <div class="row2-2">
+                                <label for="">TYPE OF EXPENSE:</label>
+                                <select name="typeOfExpense" id="">
+                                    <option value=""></option>
+                                    <option value="GENERAL EXPENSE">GENERAL EXPENSE</option>
+                                    <option value="TEAM EXPENS">TEAM EXPENSE</option>
+                                    <option value="CAMPAIGN EXPENSE">CAMPAIGN EXPENSE</option>
+                                </select>
+                            </div>
+                            <div class="row2-2">
+                                <label for="">TEAM:</label>
+                                <select name="team" id="">
+                                    <option value=""></option>
+                                    <option value="TEAM MARIE">TEAM MARIE</option>
+                                    <option value="TEAM KAREN">TEAM KAREN</option>
+                                </select>
+                            </div>
+                            <div class="row2-2">
+                                <label for="">BANK:</label>
+                                <select name="bank" id="">
+                                    <option value=""></option>
+                                    <option id="TEAM KAREN" value='CHINABANK SAVINGS'>CHINABANK SAVINGS</option>
+                                    <option id="TEAM KAREN" value='ROBINSONS BANK'>ROBINSONS BANK</option>
+                                    <option id="TEAM KAREN" value='BANK OF MAKATI'>BANK OF MAKATI</option>
+                                    <option id="TEAM KAREN" value='UNISTAR'>UNISTAR</option>
+                                    <option id="TEAM KAREN" value='UNIONBANK'>UNIONBANK</option>
+                                    <option id="TEAM KAREN" value='MALAYAN SAVINGS BANK'>MALAYAN SAVINGS BANK</option>
+                                </select>
+                            </div>
+                            <div class="row2-2">
+                                <label for="">CAMPAIGN:</label>
+                                <select name="campaign" id="">
+                                    <option value=""></option>
+                                    <option id="CHINABANK SAVINGS" value='PERSONAL LOAN'>PERSONAL LOAN</option>
+                                    <option id="CHINABANK SAVINGS" value='HANDY SALARY'>HANDY SALARY</option>
+                                    <option id="CHINABANK SAVINGS" value='AUTO LOAN'>AUTO LOAN</option>
+                                    <option id="CHINABANK SAVINGS" value='HOUSING LOAN'>HOUSING LOAN</option>
+                                    <option id="CHINABANK SAVINGS" value="TEACHER'S LOAN">TEACHER'S LOAN</option>
+                                    <option id="ROBINSONS BANK" value='MOTORCYCLE LOAN'>MOTORCYCLE LOAN</option>
+                                    <option id="ROBINSONS BANK" value='PERSONAL LOAN'>PERSONAL LOAN</option>
+                                    <option id="ROBINSONS BANK" value='CARDS'>CARDS</option>
+                                    <option id="BANK OF MAKATI" value='PERSONAL LOAN'>PERSONAL LOAN</option>
+                                    <option id="UNISTAR" value='MOTORCYCLE LOAN'>MOTORCYCLE LOAN</option>
+                                    <option id="UNIONBANK" value='HOUSING LOAN'>HOUSING LOAN</option>
+                                    <option id="MALAYAN SAVINGS BANK" value='MOTORCYCLE LOAN'>MOTORCYCLE LOAN</option>
+                                </select>
+                            </div>
+                            <div class="row2-2">
+                                <label for="">PAYEE</label>
+                                <input name="payee" type="text">
+                            </div>
+                            <div class="row2-2">
+                                <label for="">TIN NUMBER</label>
+                                <input name="tinNumber" type="text">
+                            </div>
+                        </div>
+                        <div class="row1">
+                            <label for="">ADDRESS</label>
+                            <input name="address" type="text">
+                        </div>
+                        <div class="row3">
+                            <div class="center">AMOUNT</div>
+                            <div class="row3-3">
+                                <div class="">
+                                    <label for="">AMOUNT</label>
+                                    <input name="amount" id="expense_amount" type="text">    
+                                </div>
+                                <div class="">
+                                    <label for="">PURCHASES</label>
+                                    <input name="purchases" id="expense_purchases" type="text" readonly>    
+                                </div>
+                                <div class="">
+                                    <label for="">INPUT VAT</label>
+                                    <input name="inputVat" id="expense_inputVat" type="text" readonly>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="expenseButtons">
+                            <button type="submit" id="expenseSubmitBtn">Submit</button>
+                            <button type="reset" id="expenseResetBtn">Clear</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section id="directorySection">
+
+            </section>
+            <!-- settings -->
+            <section id="settingsSection">
+
+            </section>
+            <!-- help -->
+            <section id="helpSection">
+
+            </section>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.37.1/apexcharts.min.js"></script>
+    <script src="chart1.js"></script>
+    <script src="chart2.js"></script>
+    <script src="chart3.js"></script>
+    <script src="chart4.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
