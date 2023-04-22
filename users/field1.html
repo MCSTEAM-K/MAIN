@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIELD 1</title>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="topbar">
+        <div class="logo">
+            <h2>MAUTIGU</h2>
+        </div>
+        <div class="search">
+            <!-- <input type="text" id="search" placeholder="Search Here">
+            <label for="search"><i class="fas fa-search"></i></label> -->
+        </div>
+        <i class="fas fa-bell"></i>
+        <div class="user">
+            <img src="img/mcsc.png" alt="">
+        </div>
+    </div>
+    <div class="sidebar">
+        <ul>
+            <li onclick="showFieldDashboardSection()" class="hover">
+                <a onclick="" href="#">
+                    <i class="fas fa-th-large"></i>
+                    Dashboard
+                </a>
+            </li>
+            <li>
+                <a onclick="showFieldFieldReportSection()" href="#">
+                    <i class="fa-solid fa-motorcycle"></i>
+                    Field Report
+                </a>
+            </li>
+            <li>
+                <a onclick="showFieldSettingsSection()" href="#">
+                    <i class="fas fa-cog"></i>
+                    Settings
+                </a>
+            </li>
+            <li>
+                <a onclick="showFieldHelpSection()" href="#">
+                    <i class="fas fa-question"></i>
+                    Help
+                </a>
+            </li>
+            <li>
+                <a href="../index.html">
+                    <i class="fa-solid fa-power-off"></i>
+                    Logout
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="main">
+        <!-- DashboardSection -->
+        <section id="field_dashboardSection">
+          <h2>DASHBOARD</h2>
+          <div class="login-box" id="nameBox">
+            <div>NEMUEL MACALLOP</div>
+          </div>
+          <div class="login-box">
+            <div>
+              FINISHED
+              <div>
+                <p id="finished">0</p>
+                <i class="fa-solid fa-flag-checkered"></i>
+              </div>
+            </div>
+            <div>
+              TO FIELD
+              <div>
+                <P id="accounts">0</P>
+                <i class="fa-solid fa-motorcycle"></i>
+              </div>
+            </div>
+            <div>
+              REMAINING
+              <div>
+                <p id="remaining">0</p>
+                <i class="fa-solid fa-envelopes-bulk"></i>
+              </div>
+            </div>
+            <div>
+              RATE
+              <div id="cRate">0%</div>
+            </div>
+          </div>
+          <div id="fieldTable">
+            <div class="table-wrapper">
+              <table class="fieldDashboardList">
+                <thead>
+                  <th>DL NUMBER</th>
+                  <th>AREA</th>
+                </thead>
+                <tbody id="fieldDashboardList">
+                </tbody>
+              </table>
+            </div>
+          </div> 
+        </section>
+        <!-- Field Report Section -->
+        <section id="field_feildReportSection">
+          <h2>FIELD REPORT</h2>
+          <div class="form">
+            <form id="formtab" action="https://script.google.com/macros/s/AKfycbyAj-kDzqFk_onUkyYdOAf3JpIUCwJi3w0OCaUCXMWxPg7-UPKHTuTBFZph5yVUtcBn/exec" method="post">
+              <div class="user-box">
+                <input type="time" name="timein" required="" class="timein">
+                <label>TIME IN</label>
+              </div>
+              <div class="user-box">
+                <input type="time" name="timeout" required="" class="timein">
+                <label>TIME OUT</label>
+              </div>
+              <div class="user-box">
+                <input type="text" name="dlnumber" required="">
+                <label>DL NUMBER</label>
+              </div>
+              <div class="user-box">
+                <input type="text" name="remarks" required="">
+                <label>REMARKS</label>
+              </div>
+              <div class="user-box" id="radiobtnTab"><br>
+                <label>STATUS</label><br><br>
+                <div id="radiobtn">
+                  <div>
+                    <input type="radio" name="status" required="" value="POSITIVE"><h4>POSITIVE</h4>
+                  </div>
+                  <div>
+                    <input type="radio" name="status" required="" value="NEGATIVE"><h4>NEGATIVE</h4>
+                  </div>
+                </div>
+              </div>
+              <div></div>
+              <div class="messenger">
+                <input type="text" name="messenger" required="" value="NEMUEL MACALLOP">
+                <label>MESSENGER</label>
+              </div>
+              <div class="buttons">
+                <div class="button1">
+                    <button type="submit" class="button" onclick="submitReport()">Submit</button>
+                </div>
+                <div class="button2">
+                    <button type="reset" class="button" onclick="clearReport()">Clear</button>
+                </div>
+            </form>
+          </div>
+        </section>
+        <!-- settings -->
+        <section id="field_settingsSection">
+
+        </section>
+        <!-- help -->
+        <section id="field_helpSection">
+
+        </section>
+    </div>
+</div>
+  <script src="../scripts/field.js"></script>
+  <script src="../scripts/route/field/FIELD 1.js"></script>
+  <script src="../scripts/route/summary/summary1-1.js"></script>
+</body>
+</html>

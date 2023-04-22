@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FIELD 7</title>
+  <link rel="stylesheet" href="style3.css">
+</head>
+<body>
+  <div class="login-box">
+    <h2>FIELD REPORT</h2>
+    <h3>FIELD 7</h3>
+    <div class="buttontab">
+      <div class="buttontab1">
+        <h3 onclick="showDashboard()">DASHBOARD</h3>
+      </div>
+      <div class="buttontab2">
+        <h3 onclick="showReport()">REPORT</h3>
+      </div>
+      <div class="boxtab">
+        <div id="field7">
+
+        </div>
+      </div>
+
+    </div>
+    <div id="table">
+      <table id="dashboard">
+
+      </table>
+    </div>
+    <br>
+    <div class="form" id="formtab">
+      <form action="https://script.google.com/macros/s/AKfycbyAj-kDzqFk_onUkyYdOAf3JpIUCwJi3w0OCaUCXMWxPg7-UPKHTuTBFZph5yVUtcBn/exec" method="post">
+        <div class="user-box">
+          <input type="time" name="timein" required="" class="timein">
+          <label>TIME IN</label>
+        </div>
+        <div class="user-box">
+          <input type="time" name="timeout" required="" class="timein">
+          <label>TIME OUT</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="dlnumber" required="">
+          <label>DL NUMBER</label>
+        </div>
+        <div class="user-box">
+          <input type="text" name="remarks" required="">
+          <label>REMARKS</label>
+        </div>
+        <div class="user-box">
+          <label>STATUS</label><br><br>
+          <div id="radiobtn">
+            <div>
+              <input type="radio" name="status" required="" value="POSITIVE"><h4>POSITIVE</h4>
+            </div>
+            <div>
+              <input type="radio" name="status" required="" value="NEGATIVE"><h4>NEGATIVE</h4>
+            </div>
+          </div>
+        </div>
+        <div class="messenger">
+          <input type="text" name="messenger" required="" value="FIELD 7">
+          <label>MESSENGER</label>
+        </div>
+        <div class="buttons">
+          <div class="button1">
+              <button type="submit" class="button" onclick="submitReport()">Submit</button>
+          </div>
+          <div class="button2">
+              <button type="reset" class="button" onclick="clearReport()">Clear</button>
+          </div>
+      </form>
+    </div>
+  </div><img src="" alt="">
+  <script src="route/field/FIELD 7.js"></script>
+  <script src="route/field/field-collector.js"></script>  
+  <script src="route/summary/summary1-7.js"></script>
+</body>
+</html>

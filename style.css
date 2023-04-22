@@ -1,10 +1,415 @@
-* {
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'poppins', 'sans-serif';
 }
 
+/* login page */
+.index_container{
+    height: calc(100vh - 60px);
+    width: 100%;
+    background: #ffbf00;
+}
+
+.index_login-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    padding: 40px;
+    transform: translate(-50%, -50%);
+    background: black;
+    box-sizing: border-box;
+    box-shadow: 0 15px 25px rgba(0,0,0,.6);
+    border-radius: 10px;
+}
+
+.index_login-box .user-box {
+    position: relative;
+}
+
+.index_login-box h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+}
+
+.index_login-box .user-box input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    background: transparent;
+    text-transform: none;
+}
+
+.index_login-box .user-box label {
+    position: absolute;
+    top:0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 16px;
+    color: #fff;
+    pointer-events: none;
+    transition: .5s;
+}
+
+#checkbox{
+    display: grid;
+    grid-template-columns: 50px 50px;
+    justify-content: space-between;
+}
+
+.checkboxlabel{
+    color: white;
+}
+
+.index_login-box .user-box input:focus ~ label,
+.index_login-box .user-box input:valid ~ label {
+  top: -20px;
+  left: 0;
+  color: #ffbf00;
+  font-size: 12px;
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+  
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 40px;
+    letter-spacing: 4px;
+    background: black;
+    font-weight: bold;
+    border-radius: 10px;
+    border: 3px solid #ffbf00;
+}
+
+.button:hover {
+    background: #ffbf00;
+    color: black;
+    border: 3px solid black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ffbf00,
+                0 0 25px #ffbf00,
+                0 0 50px #ffbf00,
+                0 0 100px #ffbf00;
+}
+
+
+/* sidebar starts here */
+.sidebar{
+    position: fixed;
+    top: 60px;
+    width: 260px;
+    height: calc(100% - 60px);
+    background-color: #ffbf00;
+    overflow-x: hidden;
+}
+.sidebar ul{
+    margin-top: 20px;
+}
+
+.sidebar ul li{
+    width: 100%;
+    list-style: none;   
+}
+
+.sidebar ul li:hover{
+    background: black;
+}
+
+.sidebar ul li:hover a{
+    color: #ffbf00;
+}
+
+.sidebar ul .hover{
+    background: black;
+}
+
+.sidebar ul .hover a{
+    color: #ffbf00;
+}
+
+.sidebar ul li a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    height: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.sidebar ul li a i{
+    min-width: 60px;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* main starts here */
+#dashboardSection,
+#feildReportSection,
+#campaignSection,
+#employeesSection,
+#analyticSection,
+#earningsSection,
+#directorySection,
+#accountingSection,
+#settingsSection,
+#helpSection,
+#field_dashboardSection,
+#field_feildReportSection,
+#field_settingsSection,
+#field_helpSection
+{
+    position: absolute;
+    top: 60px;
+    width: calc(100% - 260px);
+    left: 260px;
+    min-height: calc(100vh - 60px);
+    background: #f5f5f5;
+}
+
+#feildReportSection,
+#campaignSection,
+#employeesSection,
+#analyticSection,
+#earningsSection,
+#accountingSection,
+#directorySection,
+#settingsSection,
+#helpSection,
+#field_feildReportSection,
+#field_settingsSection,
+#field_helpSection{
+    display: none;
+}
+
+/* field accounts */
+#field_dashboardSection .login-box{
+    width: 100%;
+    top: 60px;
+    padding: 20px 20px 0 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+#nameBox{
+    padding: 0 20px !important;
+}
+
+#field_dashboardSection h2{
+    padding: 20px;
+}
+
+#field_dashboardSection > div:nth-child(:not(3)) > div{
+    padding: 10px 20px;
+    color: black;
+}
+
+#field_dashboardSection .login-box > div{
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+    color: #ffbf00;
+    border-radius: 10px;
+    padding: 10px 0;
+    border: 3px solid #ffbf00;
+}
+
+
+#field_dashboardSection .login-box div div{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px 0 0 0 !important;
+}
+
+#field_dashboardSection .login-box div:nth-child(4) div{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px 0 0 0 !important;
+}
+
+#fieldTable{
+    width: 100%;
+    height: calc(100vh - 403px);
+    padding: 20px;
+}
+
+#fieldTable .table-wrapper{
+    overflow-y: scroll;
+    height: calc(100vh - 430px);
+    width: calc(100% - 40px);
+    box-sizing: border-box;
+    position: absolute;
+    z-index: 1;
+}
+
+.fieldDashboardList{
+    position: absolute;
+    height: calc(100vh - 430px);
+    width: 100%;
+    border: 3px solid #ffbf00;
+    background-color: black;
+    border-radius: 10px;
+    color: #ffbf00;
+    padding: 0 10px 10px 10px;
+}
+
+.fieldDashboardList thead{
+    font-weight: bold;
+    text-align: center;
+    position: sticky;
+}
+
+/* .fieldDashboardList tbody{
+    overflow: scroll;
+} */
+
+/* field report section */
+#field_feildReportSection .form{
+    width: 100%;
+    top: 60px;
+    padding: 20px 20px 0 20px;
+}
+
+#field_feildReportSection h2{
+    padding: 20px;
+}
+
+#formtab{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+#formtab .user-box{
+    position: relative;
+} 
+
+#formtab .user-box input{
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: black;
+    margin-bottom: 15px;
+    border: none;
+    border-bottom: 1px solid black;
+    outline: none;
+    background: black;
+    text-transform: none;
+    border-radius: 10px;
+    border: 3px solid #ffbf00;
+    color: white
+}
+
+#formtab .user-box label {
+    position: absolute;
+    top: 5px;
+    left: 70px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    pointer-events: none;
+    transition: .5s;
+    font-weight: bold;
+}
+
+#formtab .user-box input:focus ~ label,
+#formtab .user-box input:valid ~ label {
+  top: -30px;
+  left: 0;
+  color: black;
+  font-size: 14px;
+}
+
+#formtab #radiobtn{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+#formtab #radiobtn div{
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+#formtab #radiobtn input{
+    margin-bottom: 10px;
+    width: 50%;
+}
+
+#formtab #radiobtnTab{
+    background-color: black;
+    border-radius: 10px;
+    border: 3px solid #ffbf00;
+    color: white;
+    padding: 10px;
+}
+
+#formtab .buttons{
+    display: flex;
+    justify-content: space-between;
+}
+  
+#formtab .button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: .5s;
+    margin-top: 0;
+    letter-spacing: 4px;
+    background: black;
+    border: 3px solid #ffbf00;
+    border-radius: 10px;
+}
+
+#formtab .button:hover {
+    background: #ffbf00;
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #ffbf00,
+                0 0 25px #ffbf00,
+                0 0 50px #ffbf00,
+                0 0 100px #ffbf00;
+}
+
+#formtab .messenger{
+    display: none;
+}
+
+
+/* admin account */
 .topbar{
     position: fixed;
     background: black;
@@ -66,108 +471,33 @@
     border-radius: 10px;
 }
 
-/* sidebar starts here */
-.sidebar{
-    position: fixed;
-    top: 60px;
-    width: 260px;
-    height: calc(100% - 60px);
-    background-color: #ffbf00;
-    overflow-x: hidden;
-}
-.sidebar ul{
-    margin-top: 20px;
-}
-
-.sidebar ul li{
-    width: 100%;
-    list-style: none;   
-}
-
-.sidebar ul li:hover{
-    background: black;
-}
-
-.sidebar ul li:hover a{
-    color: #ffbf00;
-}
-
-.sidebar ul .hover{
-    background: black;
-}
-
-.sidebar ul .hover a{
-    color: #ffbf00;
-}
-
-.sidebar ul li a{
-    width: 100%;
-    text-decoration: none;
-    color: black;
-    height: 60px;
-    font-size: 30px;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-}
-
-.sidebar ul li a i{
-    min-width: 60px;
-    font-size: 24px;
-    text-align: center;
-}
-
-/* main starts here */
-#dashboardSection,
-#campaignSection,
-#employeesSection,
-#analyticSection,
-#earningsSection,
-#directorySection,
-#accountingSection,
-#settingsSection,
-#helpSection
-{
-    position: absolute;
-    top: 60px;
-    width: calc(100% - 260px);
-    left: 260px;
-    min-height: calc(100vh - 60px);
-    background: #f5f5f5;
-}
-
-#campaignSection,
-#employeesSection,
-#analyticSection,
-#earningsSection,
-#accountingSection,
-#directorySection,
-#settingsSection,
-#helpSection{
-    display: none;
-}
-
 /* dashboard section starts here */
+
+.dashboard_header1{
+    padding: 20px 20px 0 20px;
+}
+
 .cards{
-    width: calc(100% - 260px);
-    height: 150px;
-    padding: 20px 20px;
+    width: 100%;
+    height: 120px;
+    padding: 10px 20px 0 20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    position: fixed;
     background: #f5f5f5;
-    z-index: 1;
+    position: absolute;
+    overflow: scroll;
 }
 
 .cards .card{
-    padding: 20px;
+    padding: 0 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background: black;
     border-radius: 10px;
     box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    border: 3px solid #ffbf00;
 }
 
 .cards .card:hover{
@@ -194,6 +524,119 @@
 .icon-box i{
     font-size: 45px;
     color: #ffbf00;
+}
+
+.dashboardTabs{
+    position: static;
+}
+
+.dashboardTabs2{
+    margin-top: 120px;
+}
+
+.dashboard_header2 h1{
+    padding: 20px 20px 10px 20px !important;
+}
+
+.dashboard_rankingCards{
+    width: 100%;
+    height: 250px;
+    padding: 10px 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    position: absolute;
+    overflow: scroll;
+}
+
+.dashboard_rankingCards .rankCard{
+    background: black;
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 3px solid #ffbf00;
+}
+
+.dashboard_rankingCards .rankLabel{
+    padding: 20px 20px 0 20px;
+    text-align: center;
+}
+
+.dashboard_rankingCards .earningsCard{
+    padding: 10px 20px 20px 20px;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: space-around;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+}
+
+.dashboard_rankingCards .bankLabel{
+    font-size: 15px;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.dashboard_rankingCards .productLabel{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffbf00;
+}
+
+.dashboard_rankingCards .icon-box-ranking{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dashboard_rankingCards .icon-box-ranking .card-name{
+    text-align: center;
+}
+
+.dashboard_rankingCards .icon-box-ranking img{
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+.dashboard_rankingCards .rankLabel{
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffbf00;
+}
+
+.dashboardTabs2 h1{
+    padding: 20px;
+}
+
+.dashboardTabs3{
+    margin-top: 120px;
+    padding: 0 20px 0 20px;
+}
+
+.dashboard_earningsCardsHeader{
+    width: 100%;
+    height: 100px;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    position: absolute;
+    overflow: scroll;
+}
+
+.dashboard_earningsCardsHeader .earningsCard{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    border-radius: 10px;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    border: 3px solid #ffbf00;
+}
+
+.dashboardTabs4{
+    margin-top: 270px;
+    padding: 0 20px 0 20px;
 }
 
 /* charts starts here */
@@ -228,28 +671,123 @@
     align-items: center;
 }
 
+/* Field report section starts here */
+.dashboard_header3{
+    padding: 0 0 20px 0;
+}
+
+.card{
+    border: 3px solid #ffbf00;
+}
+
+.campaignlabel{
+    display: flex;
+    justify-content: space-between;
+}
+
+.campaignlabel > div{
+    display: flex;
+    align-items: center;
+}
+
+.campaignlabel img{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.campaignlabel h3{
+    color: #ffbf00;
+    font-size: 30px;
+}
+
+.tableBackground{
+    padding: 20px;
+}
+
+.tableBackground .dashboard_header3 h1{
+    padding: 0;
+}
+
+.tableBackground .dashboard_header3{
+    padding: 0 0 10px 0;
+}
+
+#releasedtable{
+    background-color: black;
+    border: 3px solid #ffbf00;
+    border-radius: 10px;
+    padding: 20px;
+    height: calc(100vh - 310px);
+}
+
+.table{
+    width: 100%;
+    overflow: scroll;
+}
+
+th{
+    color: white;
+    position: sticky;
+    top: 0px;
+    background-color: #ffbf00;
+    color: black;
+}
+
+#releasedtable .table-wrapper{
+    overflow-y: scroll;
+    margin-top: 20px;
+    border: 3px solid #ffbf00;
+    height: calc(100vh - 430px);
+}
+
+#releaseddata td{
+    border: 1px solid white !important;
+    font-size: 12px;
+}
+
+#forfieldtable, #remainingtable, #rbanklabel, #bmilabel, #unistarlabel, #ublabel, #msblabel{
+    display: none;
+}
+
+.searchInput{
+    display: flex;
+    justify-content: end;
+}
+
+#search1, #search2, #search3, #search4{
+    height: 20px;
+    border-radius: 20px;
+    padding: 10px;
+    border: 3px solid #ffbf00;
+    margin: 0px 10px;
+}
+
+
 /* campaign section starts here */
 .campaignCards{
-    width: calc(100% - 260px);
-    height: auto;
+    width: 100%;
+    height: calc(100% - 60px);
     padding: 20px 20px 0px 20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    position: fixed;
+    position: absolute;
     background: #f5f5f5;
     z-index: 1;
+    overflow: scroll;
 }
 
 .campaignCards .campaignCard{
-    padding: 20px;
+    padding: 10px 20px;
     display: flex;
-    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     background: black;
     border-radius: 10px;
     box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    border: 3px solid #ffbf00;
 }
 
 .campaignCards .campaignCard:hover{
@@ -257,12 +795,19 @@
 }
 
 .campaignCards .campaignCard img{
-    width: 100%;
-    border-radius: 50px;
+    width: 30%;
+    border-radius: 20px;
 }
 
 .campaignCards .campaignCard h2{
     color: #ffbf00;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.campaignCards .campaignCard h3{
+    color: white;
     font-weight: bold;
     text-align: center;
     margin-top: 20px;
@@ -309,25 +854,29 @@
 
 /* employees section starts here */
 .employeesCards{
-    width: calc(100% - 260px);
-    height: 150px;
+    width: 100%;
+    /* height: calc(100% - 60px); */
     padding: 20px 20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    position: fixed;
+    position: absolute;
     background: #f5f5f5;
     z-index: 1;
+    overflow: scroll;
 }
 
 .employeesCards .employeesCard{
     padding: 20px;
+    height: 100px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     background: black;
     border-radius: 10px;
     box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    border: 3px solid #ffbf00;
+    text-align: center;
 }
 
 .employeesCards .employeesCard:hover{
@@ -341,39 +890,91 @@
 }
 
 /* earnings section starts here */
-.employeesCards{
-    width: calc(100% - 260px);
-    height: 150px;
-    padding: 20px 20px;
+.earningsCardsHeader{
+    width: 100%;
+    height: 140px;
+    padding: 20px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
-    position: fixed;
+    position: absolute;
     background: #f5f5f5;
     z-index: 1;
+    overflow: scroll;
 }
 
-.employeesCards .employeesCard{
-    padding: 20px;
+.earningsCardsHeader .earningsCard{
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background: black;
     border-radius: 10px;
     box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+    border: 3px solid #ffbf00
 }
 
-.employeesCards .employeesCard:hover{
-    background: #ffbf00;
+.earningsCards{
+    height: calc(100% - 140px);
+    width: calc(100%-40px);
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    position: absolute;
+    background: #f5f5f5;
+    top: 120px;
+    z-index: 1;
+    overflow: scroll;
 }
 
-.employeesCards .employeesCard:hover .number, 
-.employeesCards .employeesCard:hover .card-name,
-.employeesCards .employeesCard:hover .icon-box i{
-    color: black;
+.earningsCards .rankCard{
+    background: black;
+    border-radius: 10px;
+    padding: 10px 20px;
+    border: 3px solid #ffbf00
 }
 
-/* earnings section starts here */
+.earningsCards .rankLabel{
+    text-align: center;
+}
+
+.earningsCards .earningsCard{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    justify-content: space-between;
+    box-shadow: 0 7px 25px 0 rgba(0, 0, 0, 0.08);
+}
+
+.bankLabel{
+    font-size: 15px;
+    font-weight: bold;
+    color: #f5f5f5;
+}
+
+.productLabel{
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffbf00;
+}
+
+.icon-box-ranking .card-name{
+    text-align: center;
+}
+
+.icon-box-ranking img{
+    border-radius: 20px;
+    height: 100px;
+    width: 100px;
+}
+
+.rankLabel{
+    font-size: 25px;
+    font-weight: bold;
+    color: #ffbf00;
+}
+
+/* accounting section starts here */
 .accountingContainer{
     height: inherit;
     width: 100%;
@@ -386,6 +987,10 @@
     padding: 5px 10px;
     font-weight: bold;
     cursor: pointer;
+}
+
+input{
+    text-transform: uppercase;
 }
 
 .incomeBtn{
@@ -491,6 +1096,7 @@
         width: 60px;
     }
     #dashboardSection,
+    #feildReportSection,
     #campaignSection,
     #employeesSection,
     #analyticSection,
@@ -498,7 +1104,9 @@
     #directorySection,
     #accountingSection,
     #settingsSection,
-    #helpSection{
+    #helpSection,
+    #field_dashboardSection,
+    #field_feildReportSection{
     position: absolute;
     top: 60px;
     width: calc(100% - 60px);
@@ -508,9 +1116,6 @@
 }
     .main{
         left: 60px;
-        width: calc(100% - 60px);
-    }
-    .cards{
         width: calc(100% - 60px);
     }
 }
@@ -525,12 +1130,27 @@
     .charts{
         margin-top: 300px;
     }
+    .earningsCardsHeader{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .earningsCards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .employeesCards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .campaignCards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .dashboard_rankingCards{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width:500px){
     .cards{
         grid-template-columns: 1fr;
-        position: static;
+        width: 100%;
     }
     .topbar{
         grid-template-columns: 1fr 5fr 0.4fr 1fr;
@@ -553,5 +1173,29 @@
     }
     .charts{
         margin-top: 560px;
+    }
+    .earningsCardsHeader{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .earningsCards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .employeesCards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .campaignCards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .dashboard_rankingCards{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #field_dashboardSection .login-box{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    #formtab{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    #nameBox{
+        grid-template-columns: repeat(1, 1fr) !important;
     }
 }
